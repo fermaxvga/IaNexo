@@ -1,0 +1,14 @@
+.login {
+    background: #000;
+    color: #fff;
+    max-width: 30vh, fixed;
+    right: 0;
+    font-size: small;
+    position: fixed;
+    transform: translateX(100%);
+    transition: all .3s ease;
+}
+
+.login.active {
+    transform: translateX(0%);
+}

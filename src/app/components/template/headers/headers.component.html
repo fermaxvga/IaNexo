@@ -1,0 +1,48 @@
+<header>
+    <div class="container-fluid barra-superior">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+                <div class="row">
+                    <div class="col">
+                        <a role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <span>IaServer(Anexo)</span>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a class="nav-link" (click)="mostrarMenu()">
+                            <fa-icon [icon]="bar"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col logo" style="text-align: center;">
+                <a [routerLink]="['inicio']">
+                    <img src="assets/images/newsanlogo_blanco_negro.png" width="192" height="55.875">
+                </a>
+            </div>
+
+            <div class="col-2 my-2 my-lg-0 login">
+                <ul class="navbar-nav float-right">
+                    <li class="nav-item" *ngIf="!identity">
+                        <a class="nav-link" (click)="mostrarLogin()">
+                            <fa-icon class="icon" [icon]="sigIn"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item" *ngIf="identity">
+                        <a class="nav-link" [routerLink]="['logout', 1]" data-toggle="tooltip" data-placement="top" title="{{role}}">
+                          {{identity.name + ' ' + identity.surname}} 
+                          <fa-icon class="icon" [icon]="sigOut"></fa-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="login">
+        <app-login></app-login>
+    </div>
+
+
+</header>

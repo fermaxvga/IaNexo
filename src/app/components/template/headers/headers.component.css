@@ -2,11 +2,12 @@ header {
     /* position: fixed;*/
     margin-top: 0;
     width: 100%;
+    position: relative;
     /* z-index: 100;*/
 }
 
 .barra-superior {
-    background: #000;
+    background: rgb(0, 0, 0);
 }
 
 .barra-superior a {
@@ -21,4 +22,24 @@ header {
 .barra-superior a:hover {
     color: rgb(180, 175, 175);
     text-decoration: none;
+}
+
+.login {
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 479px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media print {
+    header {
+        display: none;
+    }
 }
